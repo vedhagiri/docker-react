@@ -6,5 +6,5 @@ before_install:
     - docker build -t vedhaaa/docker-react -f Dockerfile.dev .
 
 script:
-    - docker run vedhaaa/docker-react npm run test -- --coverage
+    - docker run -e CI=true vedhaaa/docker-react npm run test -- --coverage
 
